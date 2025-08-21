@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona tu tipo de seguro médico:"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupSeguro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbSIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIS" />
+
+            <RadioButton
+                android:id="@+id/rbEsSalud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EsSalud" />
+
+            <RadioButton
+                android:id="@+id/rbPrivado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguro Médico" />
+
+            <RadioButton
+                android:id="@+id/rbNinguno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ninguno" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editTextNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número telefónico del seguro"
+            android:inputType="phone"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/editTextClinica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clínica u hospital"
+            android:inputType="text"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

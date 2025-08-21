@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2DC6C">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reporte de Incidente"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E1E1E"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- ¿QUÉ OCURRIÓ? -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutIncidente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="¿Qué ocurrió?"
+                app:boxStrokeColor="#000000"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextIncidente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- DESCRIPCIÓN -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDescripcion"
+                android:layout_width="0dp"
+                android:hint="Descripción (opcional)"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="#000000"
+                app:startIconDrawable="@android:drawable/ic_menu_info_details"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/layoutIncidente"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TIPO DE INCIDENTE -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutTipo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Tipo de incidente"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#000000"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:startIconDrawable="@android:drawable/ic_menu_agenda"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/layoutDescripcion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- OTRO TIPO -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutOtroTipo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Especifica otro tipo"
+                android:visibility="gone"
+                app:boxStrokeColor="#000000"
+                app:startIconDrawable="@android:drawable/ic_menu_help"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/layoutTipo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextOtroTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- NIVEL DE PELIGRO -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutNivel"
+                android:layout_width="0dp"
+                android:hint="Nivel de peligro"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#000000"
+                app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/layoutOtroTipo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoNivel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- UBICACIÓN -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutUbicacion"
+                android:layout_width="0dp"
+                android:hint="Ubicación (editable)"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="#000000"
+                app:startIconDrawable="@android:drawable/ic_dialog_map"
+                app:startIconTint="@android:color/black"
+                app:hintTextColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutNivel">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutUbicacion"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/repo"
+                tools:ignore="MissingConstraints,UnknownId" />
+
+
+            <!-- BOTÓN DE ENVÍO -->
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#D2DC6C"
+                android:text="Enviar Reporte"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

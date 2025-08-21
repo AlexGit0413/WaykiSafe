@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1065790461586",
+    "project_id": "waykisafe-3f96d",
+    "storage_bucket": "waykisafe-3f96d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065790461586:android:dae7f2f962867527c0384b",
+        "android_client_info": {
+          "package_name": "com.example.waykisafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065790461586-5jndcd2b28c6f7a4ifsngdnlkbafsr3c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.waykisafe",
+            "certificate_hash": "7f9e1dca25989a90e7a4ad484b23e809dc9ed235"
+          }
+        },
+        {
+          "client_id": "1065790461586-if5ue7nsub0vrats6829kehanepbdoi5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMNr-gShc9IYtxHgvskJxSLbIqFXGicvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065790461586-if5ue7nsub0vrats6829kehanepbdoi5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
